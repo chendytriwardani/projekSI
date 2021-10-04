@@ -1,0 +1,933 @@
+/* import font form relative path */
+@font-face {
+    font-family: "bebasneue";
+    src: url("font/BebasNeue-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "poppins";
+    src: url("font/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: "frock";
+    src: url("font/Frock-BlackItalic.otf");
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: "poppins", sans-serif;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-image: url("image/3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* BAGIAN HOMEPAGE */
+.container {
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* navbar */
+nav {
+    width: 100%;
+    display: flex;
+    background: none;
+    justify-content: space-between;
+    color: #112d4e;
+    align-items: center;
+}
+nav ul {
+    padding-right: 20px;
+    display: flex;
+    background: 40%;
+    font-size: 13px;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    font-weight: bold;
+    padding: 15px;
+    color: #e2e2e2;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #734429;
+    transition: border-bottom 0.4s;
+}
+
+.logo-nav {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.logo {
+    font-family: 'Racing Sans One', cursive;
+    padding-left: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    
+}
+
+.logo a{
+    text-decoration: none;
+    color: black;
+    -webkit-text-stroke: 0.1px #ffd500;
+}
+
+.logo-nav ul li a {
+    color:#f9d62e;
+    padding: 20px;
+}
+
+.logo-nav ul li a:hover {
+    color: yellow;
+    border-bottom: 2px solid transparent;
+}
+
+/* Buat Menu */
+
+.menus {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+    padding: 0 20px;
+    z-index: 999;
+    background-color: #ffd500;
+}
+
+.menus li a{
+    color: black;
+}
+
+.menus li a:hover{
+    color: #523b07;
+}
+
+
+.reg-button a {
+    font-weight: bolder;
+    color: rgb(0, 42, 90);
+    margin-right: 20px;
+    padding: 6px 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.reg-button a:hover {
+    color: #ffd500;
+    background-color: black;
+    border: 3px solid black;
+    transition: background-color 0.3s;
+}
+
+/* Buat Judul */
+
+.banner {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.banner > * {
+    color: #ebebeb;
+    transform: scale(0.97, 0.97);
+    transition: transform 0.5s;
+}
+
+.banner > *:hover {
+    transform: scale(1, 1);
+}
+
+.judul1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.judul2 {
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.judul3 {
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+/* CONTENT */
+/* Buat Konten */
+
+/* headline content, */
+.content-headline {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    color: rgb(0, 42, 90);
+    font-weight: bold;
+    width: 95%;
+    border-top: 2px solid rgba(0, 42, 90, 0.5);
+    border-bottom: 2px solid rgb(0, 42, 90, 0.5);
+    border-radius: 15px;
+}
+
+.content-headline h3 {
+    font-size: 2em;
+}
+.content-headline p {
+    font-size: 2.2em;
+    letter-spacing: 2px;
+}
+
+.content-sidebar-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: "poppins", sans-serif;
+    width: 90%;
+    background-color: #f9f7f7;
+    border-radius: 5px;
+    margin: 100px auto 0;
+    box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Konten utama */
+
+.main-content {
+    font-size: 12px;
+    width: 75%;
+    padding: 10px 0 10px 10px;
+}
+
+.main-content h5 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    padding: 5px 0 0 20px;
+}
+
+.category {
+    border: 1px solid #ebebeb;
+}
+
+.category > * h6 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* card/img style, overlay*/
+
+.img-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-right: 300px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.img-container.tari-musik {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    cursor: pointer;
+    position: relative;
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #eeeeee;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.card-overlay > * {
+    text-align: center;
+    transform: scale(0.8, 0.8);
+    transition: transform 0.5s;
+}
+
+.card-overlay:hover > * {
+    transform: scale(1.3, 1.3);
+}
+
+.card-overlay:hover {
+    opacity: 1;
+}
+
+.card.fotografi {
+    background-image: url("image/gps.png");
+    background-size: cover;
+}
+
+.card.poster {
+    background-image: url("image/speed.png");
+    background-size: cover;
+}
+.card.cctv {
+    background-image: url("image/cctv.png");
+    background-size: cover;
+}
+
+
+/* text dibawah card */
+.txt {
+    padding: 30px 20px 20px;
+}
+
+p.head-descr {
+    font-weight: bold 2px;
+    font-size: 1.6em;
+    padding: 10px 0;
+}
+
+.description-flex-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.description {
+    font-weight: lighter;
+    padding: 10px;
+    padding: 0 20px;
+    border-left: 1px solid #dddddd;
+}
+
+.description.left {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.description.right {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.description.tari-musik {
+    border-left: 0;
+}
+
+.description p {
+    font-weight: bold 2px;
+    text-align: center;
+    font-size: 1.4em;
+    padding: 10px 0;
+}
+
+.description ul {
+    display: block;
+}
+
+.description ul li {
+    list-style: square;
+    font-size: 13px;
+    padding: 2px;
+}
+
+.pilihan-puisi p {
+    text-align: left;
+    font-weight: lighter;
+    font-size: 12px;
+    padding: 0 20px;
+}
+
+/* Konten Sidebar */
+.sidebar {
+    position: sticky;
+    top: 0;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 20%;
+    padding: 10px;
+    margin: 10px 10px 10px;
+    border: 1px solid #ebebeb;
+}
+
+.sidebar-label {
+    font-size: 1.75em;
+    padding: 10px 0;
+}
+
+.img-socmed {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.visitus {
+    padding: 20px 0;
+}
+
+.cp {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.cp-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cp-flex a {
+    color: black;
+    font-size: 1.02em;
+    padding-left: 5px;
+}
+.cp-flex a:hover {
+    transform: scale(1.03, 1.03);
+    transition: 0.3s;
+}
+
+.socmed {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.socmed:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.sidebar-about {
+    padding-bottom: 20px;
+    font-weight: lighter;
+}
+
+/* footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-family: "Krona One", sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: #ffd500;
+    color: black;
+
+}
+
+/* scroll-up button */
+.scroll-up {
+    font-family: "poppins", sans-serif;
+    background-color: rgb(0, 42, 90);
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+    border-radius: 5px;
+}
+.scroll-up a {
+    padding: 10px 20px;
+    font-size: 30px;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* AKHIR BAGIAN HOMEPAGE */
+
+/* BAGIAN ABOUT US */
+.about-title {
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 4rem;
+}
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1200px;
+}
+.about h1 {
+    font-size: 6rem;
+    font-family: "poppins", Arial;
+}
+.profiles {
+    position: relative;
+    margin-top: 1rem;
+    width: 90%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.profiles .profile {
+    position: relative;
+    width: 30%;
+    height: 20%;
+    background: #16384c;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-in;
+}
+.profiles .profile:hover {
+    height: 350px;
+}
+.profiles .profile .imbBx {
+    position: relative;
+    width: 96%;
+    top: -100px;
+    z-index: 1;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+.profiles .profile .imbBx img {
+    width: 100%;
+    border-radius: 4px;
+}
+.profiles .profile .about-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    left: 0;
+    bottom: 0;
+    padding: 10px 15px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.profiles .profile:hover .about-content {
+    border: 1px solid #16384c;
+    background-color: whitesmoke;
+    color: #16384c;
+    opacity: 1;
+}
+table,
+tr,
+th,
+td {
+    border: 1px solid black;
+}
+.data-table table {
+    margin: auto;
+    width: 50%;
+    border-collapse: collapse;
+}
+.data-table table ul {
+    padding-left: 2rem;
+}
+.data-table table ul li {
+    list-style-type: disc;
+}
+.sumber ul {
+    padding-left: 2rem;
+}
+.sumber ul li {
+    list-style-type: disc;
+}
+.sumber ul li a {
+    color: blue;
+}
+
+/* AKHIR BAGIAN ABOUT US */
+
+/* BAGIAN EVALUATION */
+.line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #143e59;
+}
+.top-warapper h1 {
+    font-family: "bebasneue";
+    font-size: 4rem;
+}
+.line-vertikal {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 110%;
+    background-color: #143e59;
+    top: -9px;
+    left: -15px;
+}
+.content-wrapper {
+    margin-left: 2em;
+}
+.content-wrapper h2 {
+    font-family: "bebasneue";
+    font-size: 39px;
+    line-height: 20px;
+}
+.content-wrapper .content-list {
+    border-right: 5px solid #143e59;
+    border-left: 5px solid #143e59;
+    border-top: 1px solid #143e59;
+    border-bottom: 1px solid #143e59;
+}
+.content-wrapper .content-list ul {
+    padding-left: 40px;
+}
+.content-wrapper .content-list ul li {
+    padding: 2px 0;
+    font-size: 15px;
+    list-style-type: disc;
+}
+.kelebihan {
+    margin-top: 100px;
+}
+.kelemahan {
+    margin-top: 200px;
+}
+.comment-wrapper {
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+}
+.comment-wrapper h2 {
+    margin-top: 1rem;
+    font-size: 30px;
+}
+.comment-wrapper label {
+    font-size: 16px;
+}
+.comment-form .btn-comment {
+    width: 20%;
+    background-color: rgb(47, 162, 235);
+}
+.comment-form .btn-comment:hover {
+    background-color: rgba(47, 163, 235, 0.815);
+}
+/* AKHIR BAGIAN EVALUATION */
+
+/* BAGIAN FORM */
+form {
+    margin-bottom: 6rem;
+}
+.register h1 {
+    font-family: "bebasneue";
+    font-size: 4rem;
+    text-align: center;
+    margin: 4rem 0;
+}
+.row {
+    width: 100%;
+    display: flex;
+    margin: 14px 0;
+}
+.col {
+    box-sizing: border-box;
+    padding: 0 5px;
+    width: 10%;
+    flex-grow: 1;
+}
+div.col-2 {
+    flex-grow: 3;
+}
+.col-10 {
+    flex-grow: 8;
+}
+.col-8 {
+    flex-grow: 8;
+}
+.mt-1 {
+    margin-top: 20px;
+}
+.mt-2 {
+    margin-top: 40px;
+}
+.mb-0 {
+    margin-bottom: 0;
+}
+.form-control {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 2px solid #dedede;
+}
+label {
+    font-size: 20px;
+}
+textarea {
+    width: 100%;
+    height: 50px;
+    resize: none;
+}
+.align-center {
+    text-align: center;
+}
+.align-end {
+    text-align: end;
+}
+.align-start {
+    text-align: start;
+}
+.font-size-1 {
+    font-size: 13px;
+}
+label.font-size-1 {
+    line-height: 18px;
+}
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+.group-radio {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.border {
+    border: 1px solid #dedede;
+}
+.placeholder-left::placeholder {
+    text-align: end;
+}
+.btn {
+    font-size: 12px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+}
+.btn:hover {
+    cursor: pointer;
+}
+input[type="submit"] {
+    background-color: rgba(65, 196, 120, 0.87);
+    color: white;
+}
+input[type="submit"]:hover {
+    background-color: rgb(65, 196, 120);
+}
+input[type="reset"] {
+    background-color: rgba(59, 59, 59, 0.904);
+    color: white;
+}
+input[type="reset"]:hover {
+    background-color: rgb(59, 59, 59);
+}
+/* Alert */
+.relative {
+    position: relative;
+}
+.alert {
+    position: absolute;
+    display: none;
+    font-size: 12px;
+    font-style: italic;
+    color: rgb(255, 0, 0);
+    font-family: Arial;
+    bottom: -14px;
+    left: 12px;
+}
+/* event hide show password */
+#toggle-pass {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: url("image/eye_visible.png");
+    background-size: cover;
+    cursor: pointer;
+}
+#toggle-pass.hide {
+    background: url("image/eye_hide_.png");
+    background-size: cover;
+}
+/* akhir event hide show password */
+
+/* Accordion */
+
+.accordion {
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    font-family: "frock";
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: 5px solid #ffd500;
+    text-align: center;
+    outline: none;
+    font-size: 40px;
+    transition: 0.4s;
+    -webkit-text-stroke: 0.01px black;
+}
+
+.active, .accordion:hover {
+    background-color: #4f4f4f;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: red;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #eb7d00;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    background-color: #eb7d00;
+}
+
+.panel ul li {
+    background-color: #a85a00;
+    border: 3px solid #ffd500;
+    
+}
+
+.panel ul li a {
+    display: block;
+    padding: 20px;
+    color:white;;
+    text-decoration: none;
+}
+
+.panel ul li a:hover, .panel2 ul li a:hover {
+    background-color:#703c00;
+}
+
+/* akhir accordion */
+
+/* dropdown jadwal */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f5d762;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* akhir dropdown jadwal */
+
+/* style jadwal ekonomi */
+
+.mira{
+    margin-top: 0px;
+    font-family: "frock";
+    color: white;
+    cursor: pointer;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    font-size: 50px;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.01px black;
+}
+
+/* akhir style jadwal ekonomi */
+
+.accordion2 {
+    margin-top: 130px;
+    background-color: black;
+    color: white;
+    font-family: "frock";
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: 5px solid #ffd500;
+    text-align: center;
+    outline: none;
+    font-size: 40px;
+    transition: 0.4s;
+    -webkit-text-stroke: 0.01px black;
+}
