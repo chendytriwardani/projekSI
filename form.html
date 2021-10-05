@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Form</title>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="logo-nav">
+                <div class="logo2" id="logo"><a href="index.html">EKA MIRA</a></div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="evaluation.html">Ticketing</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Buat Menu -->
+            <nav class="menus">
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <section class="content">
+                <div class="content-sidebar-wrapper">
+                    <div id="register" class="main-content register">
+                        <h1>Register</h1>
+                        <form name="myForm" action="#" method="get" onsubmit="return validasi()">
+                            <!-- NAMA -->
+                            <div class="row mt-1">
+                                <div class="col col-2 align-end"><label for="nama">Nama :</label></div>
+                                <div class="col col-10 relative">
+                                    <input type="text" id="nama" class="form-control" onkeydown="alertNama()" />
+                                    <span class="alert" id="alertNama"></span>
+                                </div>
+                            </div>
+                            <!-- AKHIR NAMA -->
+                            <!-- ALAMAT -->
+                            <div class="row">
+                                <div class="col col-2 align-end"><label for="alamat">Alamat :</label></div>
+                                <div class="col col-10 relative">
+                                    <textarea name="alamat" id="alamat" class="form-control" onkeydown="alertAlamat()"></textarea>
+                                    <span class="alert" id="alertAlamat"></span>
+                                </div>
+                            </div>
+                            <!-- AKHIR ALAMAT -->
+                            <!-- TANGGAL LAHIR -->
+                            <div class="row">
+                                <div class="col col-2 align-end"><label for="lahir">Tanggal Lahir :</label></div>
+                                <div class="col col-10 relative">
+                                    <input type="text" id="lahir" class="form-control" placeholder="dd-mm-yyyy" onkeydown="alertLahir()" />
+                                    <span class="alert" id="alertLahir"></span>
+                                </div>
+                            </div>
+                            <!-- AKHIR TANGGAL LAHIR -->
+                            <!-- UMUR -->
+                            <div class="row">
+                                <div class="col col-2 align-end"><label for="umur">Umur :</label></div>
+                                <div class="col col-10 relative">
+                                    <input type="text" id="umur" class="form-control" onkeydown="alertUmur()" />
+                                    <span class="alert" id="alertUmur"></span>
+                                </div>
+                            </div>
+                            <!-- AKHIR UMUR -->
+                            <!-- JENIS KELAMIN -->
+                            <div class="row">
+                                <div class="col col-2 align-end"><label for="laki">Jenis Kelamin :</label></div>
+                                <div class="col col-10 relative align-start group-radio">
+                                    <input type="radio" id="laki" name="kelamin" value="laki" onchange="alertKelamin()" />
+                                    <label class="font-size-1" for="laki"> Laki-laki</label>
+                                    <input type="radio" id="perempuan" name="kelamin" value="perempuan" onchange="alertKelamin()" />
+                                    <label class="font-size-1" for="perempuan"> Perempuan</label>
+                                    <span class="alert" id="alertKelamin"></span>
+                                </div>
+                            </div>
+                            <!-- AKHIR JENIS KELAMIN -->
+                            <!-- PENDIDIKAN -->
+                            <div class="row">
+                                <div class="col col-2 align-end"><label for="pendidikan">Pendidikan :</label></div>
+                                <div class="col col-10 relative">
+                                    <select name="pendidikan" id="pendidikan" class="form-control" onchange="alertPendidikan()">
+                                        <option value="">---- Pilih Pendidikan -----</option>
+                                        <option value="sd">SD/MI/Sederajat</option>
+                                        <option value="smp">SMP/MTS/Sederajat</option>
+                                        <option value="sma">SMA/MAN/Sederajat</option>
+                                    </select>
+                                    <span class="alert" id="alertPendidikan"></span>
+                                </div>
+                            </div>
+                            <!-- AKHIR PENDIDIKAN -->
+                            <!-- LOMBA -->
+                            <div class="row mt-2">
+                                <div class="col col-2 align-end"><label>Lomba :</label></div>
+                                <div class="col col-10 border relative">
+                                    <!-- LOMBA DENGAN INPUT CHECK BOX -->
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="checkbox" name="lomba" id="fotografi" />
+                                            <label for="fotografi" class="font-size-1">Fotografi</label>
+                                        </div>
+                                        <div class="col">
+                                            <input type="checkbox" name="lomba" id="desain-poster" />
+                                            <label for="desain-poster" class="font-size-1">Desain Poster</label>
+                                        </div>
+                                        <div class="col">
+                                            <input type="checkbox" name="lomba" id="video-tari-kreasi" />
+                                            <label for="video-tari-kreasi" class="font-size-1">Video Tari Kreasi</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="checkbox" name="lomba" id="video-musikali-puisi" />
+                                            <label for="video-musikali-puisi" class="font-size-1">Video Musikali Puisi</label>
+                                        </div>
+                                        <div class="col"></div>
+                                    </div>
+                                    <span class="alert" id="alertLomba"></span>
+                                </div>
+                            </div>
+                            <!-- AKHIR LOMBA -->
+                            <!-- EMAIL -->
+                            <div class="row mt-2">
+                                <div class="col col-2 align-end"><label for="email">Email :</label></div>
+                                <div class="col col-10 relative">
+                                    <input type="text" id="email" class="form-control placeholder-left" placeholder="@gmail.com" onkeydown="alertEmail()" />
+                                    <span class="alert" id="alertEmail"></span>
+                                </div>
+                            </div>
+                            <!-- AKHIR EMAIL -->
+                            <!-- CONFIRM EMAIL -->
+                            <div class="row">
+                                <div class="col col-2 align-end"><label for="confirmEmail">Confirm Email :</label></div>
+                                <div class="col col-10 relative">
+                                    <input type="text" id="confirmEmail" class="form-control" onkeydown="alertConfirmEmail()" />
+                                    <span class="alert" id="alertConfirmEmail"></span>
+                                </div>
+                            </div>
+                            <!-- AKHIR CONFIRM EMAIL -->
+                            <!-- PASSWORD -->
+                            <div class="row">
+                                <div class="col col-2 align-end"><label for="password">Password :</label></div>
+                                <div class="col col-10 relative">
+                                    <input type="password" id="password" class="form-control" placeholder="a-z, A-Z, 0-9" onkeydown="alertPassword()" />
+                                    <span class="alert" id="alertPassword"></span>
+                                    <div id="toggle-pass" onclick="showPass()"></div>
+                                </div>
+                            </div>
+                            <!-- AKHIR PASSWORD -->
+                            <!-- CONFIRM PASSWORD -->
+                            <div class="row">
+                                <div class="col col-2 align-end"><label for="confirmPassword">Confirm Password :</label></div>
+                                <div class="col col-10 relative">
+                                    <input type="password" id="confirmPassword" class="form-control" onkeydown="alertConfirmPass()" />
+                                    <span class="alert" id="alertConfirmPass"></span>
+                                </div>
+                            </div>
+                            <!-- AKHIR CONFIRM PASSWORD -->
+                            <!-- BUTTON -->
+                            <div class="row mt-1">
+                                <div class="col col-8"></div>
+                                <!-- RESET -->
+                                <div class="col align-end">
+                                    <input type="reset" class="btn" />
+                                </div>
+                                <!-- AKHIR RESET -->
+                                <!-- SUBMIT -->
+                                <div class="col align-end">
+                                    <input type="submit" class="btn" />
+                                </div>
+                                <!-- AKHIR SUBMIT -->
+                            </div>
+                            <!-- AKHIR BUTTON -->
+                        </form>
+                    </div>
+
+                    <!-- Buat sidebar -->
+                    <div class="sidebar">
+                        <!-- visit us -->
+                        <div class="visitus">
+                            <p class="sidebar-label">Visit us :</p>
+                            <div class="img-socmed">
+                                <a href="https://twitter.com/login?lang=id"><img src="./image/twitter.png" alt="" class="socmed twitter" /></a>
+                                <a href="https://www.instagram.com/"><img src="./image/ig2.png" alt="" class="socmed ig" /></a>
+                            </div>
+                        </div>
+                        <!-- contact person -->
+                        <div class="cp">
+                            <p class="sidebar-label">Contact Person :</p>
+                            <div class="cp-flex">
+                                <a href="/wa.me/+6287711447134"><img src="./image/wa.png" alt="" class="socmed wa" /></a>
+                                <a href="/wa.me/+6287711447134">+6287711447134</a>
+                            </div>
+                        </div>
+                        <div class="sidebar-about">
+                            <p class="sidebar-label">About Arven :</p>
+                            <p>
+                                Kami adalah perkumpulan pelaku, pecinta, penikmat apapun yang berkaitan dengan seni. <br />
+                                Pada kesempatan kali ini kami berinisiatif untuk mengadakan kompetisi seni digital yang dapat diikuti dari seluruh tempat di Indonesia, dengan mengangkat tema mengekspresikan diri melalui seni di dalam era
+                                pandemi. Kami berharap agar kompetisi ini dapat menjadi wadah bagi para pecinta seni agar tetap semangat dan tetap produktif meskipun dalam situasi pandemi, dengan memanfaatkan teknologi digital dalam
+                                melakukan aktivitas seni.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="scroll-up">
+                <a href="#logo">&and;</a>
+            </div>
+
+            <!-- Buat footer -->
+            <div class="footer">&copy; 2021 by DPW kelompok 6</div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
