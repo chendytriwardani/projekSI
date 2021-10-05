@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Form</title>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="logo-nav">
+                <div class="logo2" id="logo"><a href="index.html">EKA MIRA</a></div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="evaluation.html">Ticketing</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Buat Menu -->
+            <nav class="menus">
+                <ul>
+                    <li><a href="form.html">Sign Up</a></li>
+                </ul>
+            </nav>
+            <section class="content">
+                <div class="content-sidebar-wrapper">
+                    <div id="register" class="main-content register">
+                        <h1>Login</h1>
+                        <form name="myForm" action="#" method="get" onsubmit="return validasi()">
+                            <!-- EMAIL -->
+                            <div class="row mt-2">
+                                <table>
+                                    <tr>
+                                        <td><div class="col2 col-2 align-end"><label for="email">Email :</label></div></td>
+                                        <td><div class="col2 col-10 relative"><input type="text" id="email" class="form-control placeholder-left" size="50px" onkeydown="alertEmail()" />
+                                            <span class="alert" id="alertEmail"></span>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="col2 col-2 align-end"><label for="password">Password :</label></div></td>
+                                        <td><div class="col2 col-10 relative">
+                                            <input type="password" id="password" class="form-control" onkeydown="alertPassword()" />
+                                            <span class="alert" id="alertPassword"></span>
+                                            <div id="toggle-pass" onclick="showPass()"></div>
+                                        </div></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- AKHIR EMAIL -->
+
+                            <!-- BUTTON -->
+                            <div class="row mt-1">
+                                <div class="col col-8"></div>
+
+                                <!-- SUBMIT -->
+                                <div class="col align-end">
+                                    <input type="submit" value="Login" class="btn" />
+                                </div>
+                                <!-- AKHIR SUBMIT -->
+                            </div>
+                            <!-- AKHIR BUTTON -->
+                        </form>
+                </div>
+            </section>
+
+            <div class="scroll-up">
+                <a href="#logo">&and;</a>
+            </div>
+
+            <!-- Buat footer -->
+            <div class="footer">&copy; 2021 by Kelompok 4</div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
